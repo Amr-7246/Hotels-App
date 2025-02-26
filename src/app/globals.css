@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Mysuru:wght@300;400;500;600;700&family=Orbitron:wght@400..900&family=Yuji+Mai&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,9 +10,15 @@
   --foreground: #171717;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #101010;
     --foreground: #ededed;
   }
 }
@@ -18,4 +27,125 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  width: 100dvw;
+  overflow-x: hidden;
+  user-select: none;
+}
+
+.font-orbitron {
+  font-family: theme('fontFamily.orbitron');
+}
+
+@layer utilities {
+
+  /* * ############################### Start Hotel_Detailes ################################ */
+  /* *########### hotel-nav */
+  .hotel-nav {
+    @apply duration-500 cursor-pointer text-stone-700 hover:text-white px-2 py-1  font-bold
+  }
+
+  /* * ############################### End Hotel_Detailes ################################ */
+  /* * ############################### Start Filter ################################ */
+    /* *########### button */
+    .btn {
+      @apply font-orbitron mx-[10px] duration-[500ms] w-[200px] text-teal-800 font-black text-[17px] px-3 py-2 rounded-3xl  bg-black my-5 hover:bg-transparent border border-transparent hover:border hover:text-teal-700 hover:border-teal-700;
+    }
+  /* *########### r-icon-input */
+  .filter-type-div {
+    @apply  space-y-2 my-10 mx-3
+  }
+  .filter-type {
+    @apply w-fit text-xl font-black font-orbitron pl-[20px] p-[15px]  bg-gradient-to-r from-black to-teal-700/50 bg-clip-text text-transparent
+  }
+  .options {
+    @apply font-bold font-yujiMai text-stone-300 flex items-center gap-2 cursor-pointer border rounded-lg px-3 py-2  duration-[500ms] hover:shadow-xl hover:shadow-zinc hover:scale-[1.1] hover:rotate-[2deg]
+  }
+
+  /* * ############################### End Filter ################################ */
+  /* * ############################### staer Hero ################################ */
+  /* *########### r-icon-input */
+  .r-icon-input {
+    @apply  pl-2 ml-2 border-l h-[60px] cursor-pointer text-zinc hover:text-rose-500 duration-[500ms] text-[20px] flex flex-center border-black
+  }
+  /* *########### l-icon-input */
+  .l-icon-input {
+    @apply  mr-5 h-[50px] cursor-pointer text-zinc hover:text-green-500 duration-[500ms] text-[22px] flex flex-center border-black
+  }
+  /* *########### text-input-top-span */
+  .text-input-top-span {
+    @apply font-black text-black block text-[18px] 
+  }
+  /* *########### text-input-down-span */
+  .text-input-down-span {
+    @apply text-white/30 text-[13px]  
+  }
+  /* *########### text-input */
+  .text-input {
+    @apply  pt-2 w-[170px]  min-h-[50px] 
+  }
+  /* *########### text-input */
+  .drop-list {
+    @apply absolute top-[10%] w-[100%] bg-sky-600
+  }
+  /* *########### input */
+  .input {
+    @apply px-2 text-black font-hindMysuru flex flex-center min-h-[50px] bg-stone-800 rounded-lg  ;
+  }
+  /* * ############################### End Hero ################################ */
+  /* *####################################### Start SASS */
+  .nav-btn {
+    @apply rounded-md font-orbitron bg-gray-900 p-1 px-3 duration-[500ms] font-bold text-stone-500 hover:text-stone-900 hover:bg-gray-500;
+  }
+  .bg-main-div {
+    @apply bg-gray-950 relative duration-[300ms] flex flex-center;
+  }
+  .bg-inner-div {
+    @apply w-[80%] h-[80%] bg-zinc ;
+  }
+  .monitor-schema {
+    @apply my-5 w-[80%] min-h-[100px] rounded-lg bg-stone-950 border border-stone-800 flex flex-center flex-wrap relative;
+  }
+  .monitor-productevity-span {
+    @apply absolute bg-stone-500;
+  }
+  .SASS-schema {
+    @apply font-poppins py-10 duration-[700ms] min-h-[500px] text-stone-500 flex w-[90%] md:w-[80%] mt-[20px] rounded-[30px]   mx-auto flex-center;
+  }
+  /* *####################################### End SASS */
+
+  /* *########### schema */
+  .schema {
+    @apply font-poppins z-10 py-10 duration-[700ms] md:min-h-[500px] min-h-[500px] flex w-[80%] md:w-[100%] mt-[20px] rounded-[30px] border-[1px] dark:border-white/10 dark:bg-black/50 border-black bg-white/5 mx-auto flex-center;
+  }
+  /* *########### body-div */
+  .body-div {
+    @apply dark:bg-zinc bg-black duration-[500ms];
+  }
+  /* *########### container */
+  .container {
+    @apply w-[100%] md:w-[75%] mx-auto;
+  }
+  /* *########### text-cliping */
+  .header-text {
+    @apply font-black text-[22px] text-orange-200/70;
+  }
+  .header-cliping {
+    @apply font-yujiMai font-black text-[25px] bg-gradient-to-l from-orange-800 via-rose-800 to-purple-900 text-transparent text-clip bg-clip-text;
+  }
+  .text-cliping {
+    @apply font-orbitron font-black md:text-[35px] text-[25px] bg-gradient-to-l from-zinc via-red-950 to-sky-300/50 text-transparent text-clip bg-clip-text;
+  }
+
+  /* *########### flex-center */
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+  /* *########### icons */
+  .icons {
+    @apply hover:opacity-[1] opacity-[0.2] duration-[500ms] cursor-pointer text-sky-500 mx-1 text-[20px];
+  }
+  /* *########### taskes-btn */
+  .taskes-btn {
+    @apply flex justify-around items-center bg-black/50 font-orbitron mx-[10px] duration-[500ms] w-[200px] text-sky-500 font-black text-[17px] px-5 py-2 rounded-3xl my-5 hover:bg-transparent border border-transparent hover:border hover:text-blue hover:border-blue;
+  }
 }
