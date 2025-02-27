@@ -6,6 +6,7 @@ import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 
+
 // * Fixing leaflet icon issues in Next.js 😵‍💫
 (L.Icon.Default as any).mergeOptions({
     iconRetinaUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png',

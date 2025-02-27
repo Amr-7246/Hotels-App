@@ -28,9 +28,6 @@ return (
                     <span className="text-input-down-span">Cairo. Cairo Egypt . . .  </span>
                 </div>
                 <span className="r-icon-input"><IoMdArrowDropdownCircle/></span>
-                {/* <div className=" drop-list ">
-                    Hi there
-                </div> */}
             </div>
             <div className="input ">
                 <span className="l-icon-input"><IoMdCalendar/></span>
@@ -39,9 +36,6 @@ return (
                     <span className="text-input-down-span">5 Mar - 7Mar</span>
                 </div>
                 <span className="r-icon-input"><IoMdArrowDropdownCircle/></span>
-                {/* <div className=" drop-list ">
-                    Hi there
-                </div> */}
             </div>
             <div className="input ">
                 <span className="l-icon-input"><FaUserFriends/></span>
@@ -50,9 +44,6 @@ return (
                     <span className="text-input-down-span">7 travellers . .  1 room  </span>
                 </div>
                 <span className="r-icon-input"><IoMdArrowDropdownCircle/></span>
-                {/* <div className=" drop-list ">
-                    Hi there
-                </div> */}
             </div>
         </div>
 

@@ -1,3 +1,4 @@
+"use client"; 
 import { createWrapper } from 'next-redux-wrapper';
 import { store } from './index';
 

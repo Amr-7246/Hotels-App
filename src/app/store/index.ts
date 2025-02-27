@@ -1,3 +1,4 @@
+"use client"; 
 import { configureStore } from '@reduxjs/toolkit';
 import myDataReducer from './slices/myDataSlice';
 import filterReducer from './slices/Filter';
