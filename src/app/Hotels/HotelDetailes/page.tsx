@@ -1,3 +1,4 @@
+"use client";
 import GlobalNavBar from '@/app/components/GlobalNavBar';
 import Search from '../components/Search'
 import HotelHero from './components/HotelHero'

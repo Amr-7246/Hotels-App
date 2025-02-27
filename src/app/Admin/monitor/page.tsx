@@ -1,3 +1,4 @@
+"use client";
 import HotelsProductivity from '../components/monitor/HotelsProductivity'
 import RoomsMonitor from '../components/monitor/RoomsMonitor'
 import ClinteIssues from '../components/monitor/ClinteIssues'

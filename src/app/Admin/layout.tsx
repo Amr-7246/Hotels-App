@@ -1,3 +1,4 @@
+"use client";
 import BackGround from './components/BackGround'
 import NavBar from './components/NavBar'
 

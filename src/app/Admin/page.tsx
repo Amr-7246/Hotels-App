@@ -1,3 +1,4 @@
+"use client";
 import GlobalNavBar from "../components/GlobalNavBar";
 
 export default function Page() {

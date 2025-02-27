@@ -1,3 +1,5 @@
+"use client";
+
 import Featuers from '../components/controller/Featuers'
 import ClinteControle from '../components/controller/ClinteControle'
 import RoomsControle from '../components/controller/RoomsControle'

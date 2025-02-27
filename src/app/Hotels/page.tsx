@@ -1,3 +1,4 @@
+"use client";
 import Search from './components/Search'
 import HotelsCard from './components/HotelsCard'
 import Filters from './components/Filters'
