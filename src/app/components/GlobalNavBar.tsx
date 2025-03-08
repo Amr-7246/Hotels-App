@@ -13,7 +13,7 @@ const GlobalNavBar: React.FC = () => {
     ];
 
 return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-stone-800 border-t border-stone-800 shadow-md z-50">
+    <nav className="fixed bottom-0 left-0 right-0 bg-stone-800 border-t border-stone-600 shadow-md shadow-stone-500 z-50">
         <div className="flex justify-around font-yujiMai items-center p-3">
         {navItems.map((item) => {
             const isActive = pathname === item.href;
