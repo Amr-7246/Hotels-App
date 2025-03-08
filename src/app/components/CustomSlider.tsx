@@ -81,7 +81,7 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ slides }) => {
                 </div>
               </Link>
             <Link href={'/Hotels'}>
-              <p className="mt-2 text-center cursor-pointer hover:text-stone-600 duration-500 text-sm text-white">{slide.text}</p>
+              <p className="mt-2 text-center cursor-pointer text-stone-600 duration-500 text-sm hover:text-white">{slide.text}</p>
             </Link>
             </div>
           ))}
