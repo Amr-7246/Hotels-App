@@ -7,7 +7,7 @@ import GlobalNavBar from '../components/GlobalNavBar';
 import { Hotels } from "./components/Data/hotelsData";
 
 export default function Page() {
-    const [searchResults, setSearchResults] = useState<any[]>(Hotels); // Default to all hotels
+    const [searchResults, setSearchResults] = useState<any[]>(Hotels);
 
     return (
         <div className='flex flex-wrap w-full'>
