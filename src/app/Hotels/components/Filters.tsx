@@ -195,7 +195,7 @@ const Filters: React.FC<{ setSearchResults: (results: any[]) => void }> = ({ set
       {/* ############# Start Filter Button ####################### */}
       <div className='flex flex-center'>
         <button 
-          onClick={() => { handleFilter() , dispatch(toggleFilter())} }
+          onClick={() => { handleFilter() , document.getElementById('Hotels')?.scrollIntoView({ behavior: 'smooth' }); dispatch(toggleFilter())} }
           className="font-black px-5 text-lg duration-500 border border-stone-500 hover:text-teal-600 hover:border-teal-600 hover:scale-[1.1] py-2 bg-blue-500 text-stone-600 rounded-lg">
           Filter
         </button>

@@ -16,13 +16,10 @@ const HotelsCard: React.FC<HotelsCardProps> = ({ SearchResults }) => {
   const dispatch = useAppDispatch();
   const isToggle = useAppSelector((state) => state.filter.isToggle);
 
-  // Use search results if available, otherwise default to Hotels.
   const customeHotels = SearchResults && SearchResults.length > 0 ? SearchResults : Hotels;
 
-  // State to control loading
   const [isLoading, setIsLoading] = useState(false);
 
-  // Whenever SearchResults changes, show loading for 1s
   useEffect(() => {
     setIsLoading(true);
     const timer = setTimeout(() => {
@@ -33,7 +30,7 @@ const HotelsCard: React.FC<HotelsCardProps> = ({ SearchResults }) => {
   }, [SearchResults]);
 
   return (
-    <div className=' pb-[100px] w-full bg-stone-900 shadow-lg shadow-black lg:h-[1200px] md:overflow-y-scroll '>
+    <div id = 'Hotels'  className='  pb-[100px] w-full bg-stone-900 shadow-lg shadow-black lg:h-[1200px] md:overflow-y-scroll '>
       <div className="text-white/30 w-full px-8 pb-8">
         {/* Header */}
           <div className='flex items-end justify-between lg:pt-8'>
