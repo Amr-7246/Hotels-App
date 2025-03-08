@@ -20,11 +20,12 @@ const Slider: NextPage = () => {
     const { name } = useAppSelector((state) => state.myData);
     
     const slides = [
-        { src: Hotel_1 , alt: "Slide 1", text: "Caption One" },
-        { src: Hotel_2 , alt: "Slide 2", text: "Caption Two" },
-        { src: Hotel_3 , alt: "Slide 3", text: "Caption Three" },
-        { src: Hotel_4 , alt: "Slide 4", text: "Caption Four" },
+        { src: Hotel_1, alt: "Slide 1", text: "Luxury & Comfort Awaits" },
+        { src: Hotel_2, alt: "Slide 2", text: "Your Perfect Staycation" },
+        { src: Hotel_3, alt: "Slide 3", text: "Relax in Style" },
+        { src: Hotel_4, alt: "Slide 4", text: "A Home Away from Home" },
     ];
+    
     const handleUpdateName = () => {
         dispatch(setMyData('New Name'));
     };
@@ -36,12 +37,6 @@ return (
             <Link href={'/Hotels'}>
                 <span className="header-cliping cursor-pointer hover:pl-5 duration-[500ms]">Recommended stays for you . .</span> 
             </Link>
-            </div>
-            <CustomSlider slides={slides} />
-        </div>
-        <div className="w-full mx-auto max-w-6xl p-4">
-            <div className=" flex pl-5 m-5 h-[50px] border-b-[5px] rounded-b-md border-black">
-                <span className="header-cliping">Discover your new favourite stay . .</span> 
             </div>
             <CustomSlider slides={slides} />
         </div>

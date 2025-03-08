@@ -15,7 +15,6 @@ import { span } from 'framer-motion/client';
 
 
 const HotelHero: React.FC  = () => {
-  // ^  Scroll function that finds the element by id and scrolls to it smoothly
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
@@ -36,7 +35,7 @@ const HotelHero: React.FC  = () => {
   return (
     <div className =' min-h-screen w-full scroll-smooth '>
       {/* Hero */}
-      <div className=' h-[300px] md:h-[400px] flex flex-center gap-5 md:px-10  bg-black rounded-[0px]'> 
+      <div className=' md:pb-[40px] h-[300px] md:h-[400px] flex flex-center gap-5 md:px-10  bg-black rounded-[0px]'> 
         <span   className= 'w-[85%] max-w-[600px] md:h-[90%] h-[80%]  relative overflow-hidden rounded-lg border border-stone-600 shadow-lg shadow-stone-700 ' >
           <Image layout="fill" objectFit="cover" src={ hotel.imageUrl } alt="Hotel Hero"   className="w-[100%]" />
         </span>
@@ -94,7 +93,7 @@ const HotelHero: React.FC  = () => {
       </div>
       {/* Overview */}
       {/* Rooms*/}
-      <div id="rooms"  >
+      <div id="rooms" className='pb-[100px]'  >
         <Rooms/>
       </div>
       {/* Rooms*/}

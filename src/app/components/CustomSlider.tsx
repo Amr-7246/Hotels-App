@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import Link from "next/link";
 
 interface Slide {
   src: StaticImageData;
@@ -68,16 +69,20 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ slides }) => {
               className="flex-shrink-0 p-4"
               style={{ width: `${slideWidthPercentage}%` }}
             >
-              <div className="relative h-64 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl duration-300">
-                <Image
-                  src={slide.src}
-                  alt={slide.alt}
-                  layout="fill"
-                  objectFit="cover"
-                  className="hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <p className="mt-2 text-center text-sm text-white">{slide.text}</p>
+              <Link href={'/Hotels'}>
+                <div className="relative h-64 cursor-pointer rounded-lg overflow-hidden shadow-lg hover:shadow-2xl duration-300">
+                  <Image
+                    src={slide.src}
+                    alt={slide.alt}
+                    layout="fill"
+                    objectFit="cover"
+                    className="hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </Link>
+            <Link href={'/Hotels'}>
+              <p className="mt-2 text-center cursor-pointer hover:text-stone-600 duration-500 text-sm text-white">{slide.text}</p>
+            </Link>
             </div>
           ))}
         </motion.div>
