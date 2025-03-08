@@ -7,7 +7,7 @@ const GlobalNavBar: React.FC = () => {
     const pathname = usePathname();
 
     const navItems = [
-    { label: 'Admin', href: '/Admin' },
+    { label: 'Home', href: '/' },
     { label: 'Hotels', href: '/Hotels' },
     { label: 'HotelDetails', href: '/Hotels/HotelDetailes' },
     ];

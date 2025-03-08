@@ -17,7 +17,7 @@ const DynamicMap = dynamic(() => import("./components/Map"), { ssr: false });
 export default function Home() {
   return (
     <>
-      <div className="">
+      <div className="bg-stone-950">
         <HeroSection/>
         <DynamicMap />
         <Slider/>

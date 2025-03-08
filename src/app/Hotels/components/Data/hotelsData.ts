@@ -1,4 +1,5 @@
 import { StaticImageData } from 'next/image';
+import { roomsData } from './RoomsData';
 import { 
   Hotel_1, Hotel_2, Hotel_3, Hotel_4, Hotel_5, Hotel_6,
   Hotel_7, Hotel_8, Hotel_9, Hotel_10, Hotel_11, Hotel_12,
@@ -6,13 +7,29 @@ import {
   Hotel_19, Hotel_20, Hotel_21, Hotel_22, Hotel_23
 } from '../../../../assets/index';
 
+export interface Availability {
+    roomsAvailable: number;
+    nearestThreeCheckOutDates: string[];
+}
+export interface RoomType {
+    type: string;
+    roomsNumber: number;
+    maxOccupancy: number;
+    availability: Availability[];
+}
+
+export interface HotelRooms {
+    totalRooms: number;
+    roomTypes: RoomType[];
+}
+
 export interface Hotel {
     id: number;
     name: string;
     address: string;
     popularLocations: string[];
     amenities: string[];
-    mealPlansAvailable: string;
+    mealPlansAvailable: string; 
     paymentType: string;
     propertyType: string;
     propertyBrand: string;
@@ -27,9 +44,10 @@ export interface Hotel {
     rating: number;
     description: string;
     imageUrl: StaticImageData;
-  }
+    rooms: HotelRooms;
+}
   
-  export const Hotels: Hotel[] = [
+export const Hotels: Hotel[] = [
     {
       id: 1,
       name: 'Hyatt Regency Cairo West',
@@ -51,7 +69,8 @@ export interface Hotel {
       rating: 4.7,
       description:
         'Experience luxury and comfort at Hyatt Regency Cairo West, ideally located near iconic landmarks.',
-      imageUrl: Hotel_5
+      imageUrl: Hotel_5,
+      rooms: roomsData[0]
     },
       {
         id: 2,
@@ -74,7 +93,9 @@ export interface Hotel {
         rating: 4.5,
         description:
           'Enjoy a seaside retreat with modern amenities and a prime location at Marriott Hotel Alexandria.',
-        imageUrl: Hotel_6
+        imageUrl: Hotel_6,
+        rooms: roomsData[1]
+
       },
       {
         id: 3,
@@ -97,7 +118,9 @@ export interface Hotel {
         rating: 4.9,
         description:
           'Discover unparalleled luxury and service at Four Seasons Hotel Cairo at Nile Plaza.',
-        imageUrl: Hotel_7
+        imageUrl: Hotel_7,
+        rooms: roomsData[2]
+
       },
       {
         id: 4,
@@ -120,7 +143,9 @@ export interface Hotel {
         rating: 4.3,
         description:
           'Stay in the heart of Cairo with modern amenities and stylish design at Steigenberger Hotel El Tahrir.',
-        imageUrl: Hotel_8
+        imageUrl: Hotel_8,
+      rooms: roomsData[3]
+
       },
       {
         id: 5,
@@ -143,7 +168,9 @@ export interface Hotel {
         rating: 4.6,
         description:
           'Experience the ultimate desert resort with stunning views and adventure activities at InterContinental Dahab Resort.',
-        imageUrl: Hotel_9
+        imageUrl: Hotel_9,
+      rooms: roomsData[4]
+
       },
       {
         id: 6,
@@ -166,7 +193,9 @@ export interface Hotel {
         rating: 4.4,
         description:
           'Enjoy a mix of ancient charm and modern comfort at Hilton Luxor Resort & Spa, near iconic historical sites.',
-        imageUrl: Hotel_10
+        imageUrl: Hotel_10,
+      rooms: roomsData[5]
+
       },
       {
         id: 7,
@@ -189,7 +218,9 @@ export interface Hotel {
         rating: 4.8,
         description:
           'Immerse yourself in regal luxury and stunning views at Sofitel Winter Palace Aswan.',
-        imageUrl: Hotel_11
+        imageUrl: Hotel_11,
+      rooms: roomsData[6]
+
       },
       {
         id: 8,
@@ -212,7 +243,9 @@ export interface Hotel {
         rating: 4.9,
         description:
           'Indulge in a luxurious retreat with stunning sea views at Ritz-Carlton Sharm El Sheikh.',
-        imageUrl: Hotel_12
+        imageUrl: Hotel_12,
+      rooms: roomsData[7]
+
       },
       {
         id: 9,
@@ -235,7 +268,9 @@ export interface Hotel {
         rating: 4.5,
         description:
           'Enjoy the perfect blend of luxury and nature at Mövenpick Resort El Gouna, an oasis in the desert.',
-        imageUrl: Hotel_13
+        imageUrl: Hotel_13,
+      rooms: roomsData[8]
+
       },
       {
         id: 10,
@@ -258,7 +293,9 @@ export interface Hotel {
         rating: 4.2,
         description:
           'Discover modern comfort and style in the heart of Cairo at Barcelo Cairo.',
-        imageUrl: Hotel_14
+        imageUrl: Hotel_14,
+      rooms: roomsData[9]
+
       }
     ];
     

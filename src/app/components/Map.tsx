@@ -37,7 +37,7 @@ const MapComponent = () => {
     // & Coordinates for Egypt 🇪🇬
     return (
     <>
-    <div className="h-full relative w-full">
+    <div className="h-full z-10 relative w-full">
         {/* <button
             onClick={() => {setIsDarkMode(!isDarkMode)}}
             className=" top-[-10%] m-4 px-4 absolute py-2 bg-gray-800 z-50 text-white rounded-full shadow-lg hover:bg-gray-700 transition">
