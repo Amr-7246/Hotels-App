@@ -47,13 +47,9 @@ const Filters: React.FC<{ setSearchResults: (results: any[]) => void }> = ({ set
 
   const handleFilter = () => {
     const filteredHotels = Hotels.filter(hotel => {
-      // Filter by Property Type if any are selected
       if (selectedPropertyTypes.length && !selectedPropertyTypes.includes(hotel.propertyType)) return false;
-      // Filter by Amenities: each selected amenity must be present in the hotel's amenities
       if (selectedAmenities.length && !selectedAmenities.every(a => hotel.amenities.includes(a))) return false;
-      // Filter by Price Range: hotel price must be less than or equal to the chosen max price
       if (hotel.pricePerNight > priceRange) return false;
-      // Filter by Rating: hotel rating must be equal or higher than selected
       if (hotel.rating < selectedRating) return false;
       return true;
     });
@@ -62,11 +58,11 @@ const Filters: React.FC<{ setSearchResults: (results: any[]) => void }> = ({ set
   };
 
   return (
-    <div className={`${ isToggle ? 'translate-x-[-100%] opacity-0 ' : 'translate-x-[0%] z-50 opacity-[1] '}  z-50 overflow-y-scroll min-h-screen absolute py-5 w-[100%] top-0 duration-500       
-                        ${ isToggle ? '  md:translate-x-[-50%] md:opacity-[0] md:z-[-1] md:translate-y-[-50%] md:top-[400px] ' : ' md:translate-x-[-50%] md:translate-y-[-50%] md:opacity-[1] md:top-[500px] md:z-50   '} md:left-[50%] md:w-[80%] md:min-h-[500px] md:rounded-xl  md:overflow-y-scroll  md:h-[600px]              
-                        lg:w-[100%] lg:h-[1200px] lg:min-h-screen lg:overflow-hidden lg:relative lg:top-0 lg:left-[0px] lg:opacity-[1] lg:z-50 lg:rounded-none lg:translate-x-[0%] lg:translate-y-[0%] mx-auto bg-stone-800 lg:bg-stone-800/50 duration-[500ms] lg:duration-0 `}>
+    <div id='Filter' className={`${isToggle ? 'translate-x-[-100%] opacity-0 ' : 'translate-x-[0%] z-50 opacity-[1] '} z-50 overflow-y-scroll h-screen pb-[70px] absolute py-5 w-[100%] top-0 duration-500       
+                ${isToggle ? 'md:translate-x-[-50%] md:opacity-[0] md:z-[-1] md:translate-y-[-50%] md:top-[400px] '  : 'md:translate-x-[-50%] md:translate-y-[-50%] md:opacity-[1] md:top-[500px] md:z-50 '}  md:left-[50%] md:w-[80%] md:min-h-[500px] md:rounded-xl md:overflow-y-scroll md:h-[600px]              
+                lg:w-[100%] lg:h-[1200px] lg:min-h-screen lg:overflow-hidden lg:relative lg:top-0 lg:left-[0px]  lg:opacity-[1] lg:z-50 lg:rounded-none lg:translate-x-[0%] lg:translate-y-[0%] mx-auto bg-stone-800  lg:bg-stone-800/50 duration-[500ms] lg:duration-0  scrollbar-thin scrollbar-track-transparent scrollbar-thumb-stone-900`}>
       <h1 className="border-b  justify-between border-rose-900 flex items-center pb-1">
-        <span onClick={() => dispatch(toggleFilter())}  className= " lg:hidden ml-5 cursor-pointer font-bold text-sm duration-500 border border-transparent  hover:text-teal-600 hover:border-teal-600 hover:scale-[1.1] px-4 py-2 text-stone-600 rounded-lg ">Close</span>
+        <span onClick={() =>{ document.body.style.overflow = "auto"; dispatch(toggleFilter())}}  className= " lg:hidden ml-5 cursor-pointer font-bold text-sm duration-500 border border-transparent  hover:text-teal-600 hover:border-teal-600 hover:scale-[1.1] px-4 py-2 text-stone-600 rounded-lg ">Close</span>
         <span className="header-cliping mr-8 w-fit lg:ml-5 ">Filter</span>
       </h1>
       
@@ -195,7 +191,7 @@ const Filters: React.FC<{ setSearchResults: (results: any[]) => void }> = ({ set
       {/* ############# Start Filter Button ####################### */}
       <div className='flex flex-center'>
         <button 
-          onClick={() => { handleFilter() , document.getElementById('Hotels')?.scrollIntoView({ behavior: 'smooth' }); dispatch(toggleFilter())} }
+          onClick={() => { document.body.style.overflow = "auto"; handleFilter() , document.getElementById('Hotels')?.scrollIntoView({ behavior: 'smooth' }); dispatch(toggleFilter())} }
           className="font-black px-5 text-lg duration-500 border border-stone-500 hover:text-teal-600 hover:border-teal-600 hover:scale-[1.1] py-2 bg-blue-500 text-stone-600 rounded-lg">
           Filter
         </button>

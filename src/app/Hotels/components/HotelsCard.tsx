@@ -39,7 +39,7 @@ const HotelsCard: React.FC<HotelsCardProps> = ({ SearchResults }) => {
             </h1>
             <button
               className='btn lg:hidden'
-              onClick={() => dispatch(toggleFilter())}
+              onClick={() =>{ document.body.style.overflow = "hidden"; document.getElementById('Filter')?.scrollIntoView({ behavior: 'smooth' }); dispatch(toggleFilter())}}
             >
               Filter
             </button>

@@ -148,7 +148,7 @@ return (
         {/* Search Button */}
             <div className="w-full flex justify-center mt-4">
                 <Link href={'/Hotels'}>
-                    <button  onClick={() => { document.getElementById('Hotels')?.scrollIntoView({ behavior: 'smooth' });  handleSearch}}  className = " text-xl duration-500 border border-stone-500  hover:text-teal-600 hover:border-teal-600 hover:scale-[1.1] p-3 bg-blue-500 text-stone-600 rounded-full " >
+                    <button  onClick={ handleSearch } className = " text-xl duration-500 border border-stone-500  hover:text-teal-600 hover:border-teal-600 hover:scale-[1.1] p-3 bg-blue-500 text-stone-600 rounded-full " >
                         <FaSearch />
                     </button>
                 </Link>
